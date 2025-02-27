@@ -19,7 +19,11 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         // 실행 가능한 타겟 (Executable Target)
         .executableTarget(
-            name: "Main",
+            name: "A",
+            dependencies: ["Modex"] // 필요한 라이브러리 추가 가능
+        ),
+        .executableTarget(
+            name: "B",
             dependencies: ["Modex"] // 필요한 라이브러리 추가 가능
         ),
         .target(
