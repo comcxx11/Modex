@@ -14,6 +14,11 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
+        // 실행 가능한 타겟 (Executable Target)
+        .executableTarget(
+            name: "Main",
+            dependencies: ["Modex"] // 필요한 라이브러리 추가 가능
+        ),
         .target(
             name: "Modex"),
         .testTarget(
