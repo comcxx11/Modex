@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Main"
-               BuildableName = "Main"
-               BlueprintName = "Main"
+               BlueprintIdentifier = "A"
+               BuildableName = "A"
+               BlueprintName = "A"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Main"
-            BuildableName = "Main"
-            BlueprintName = "Main"
+            BlueprintIdentifier = "A"
+            BuildableName = "A"
+            BlueprintName = "A"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Main"
-            BuildableName = "Main"
-            BlueprintName = "Main"
+            BlueprintIdentifier = "A"
+            BuildableName = "A"
+            BlueprintName = "A"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
