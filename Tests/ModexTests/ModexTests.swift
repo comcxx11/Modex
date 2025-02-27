@@ -1,6 +1,16 @@
 import Testing
 @testable import Modex
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+@Test func testBasicMath() {
+    let sum = 2 + 3
+    #expect(sum == 5)
+}
+
+@Test func testStringConcatenation() {
+    let result = "Hello, " + "Modex!"
+    #expect(result == "Hello, Modex!")
+}
+
+@Test func hello() {
+    #expect("A" == "A")
 }
