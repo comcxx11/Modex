@@ -8,6 +8,10 @@ class Main {
         let app = Main()
         app.run()
 
+        Utils.killApp()
+
+        print(Utils.build)
+
         print(ModexConfig.a)
     }
 
