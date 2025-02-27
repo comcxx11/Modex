@@ -4,18 +4,6 @@ import Modex
 @main
 class Main {
     static func main() {
-        print("Hello, Modex is running!")
-        let app = Main()
-        app.run()
-
-        Utils.killApp()
-
-        print(Utils.build)
-
-        print(ModexConfig.a)
-    }
-
-    func run() {
-        print("Modex is new active!")
+        print("123a4".isNumeric)
     }
 }

@@ -10,6 +10,7 @@ public class Utils {
         }
     }
 
+    #if os(iOS)
     public static var version: String? {
         guard let dictionary = Bundle.main.infoDictionary,
             let version = dictionary["CFBundleShortVersionString"] as? String,
@@ -18,6 +19,7 @@ public class Utils {
         let versionAndBuild: String = "ver: \(version), build: \(build)"
         return versionAndBuild
     }
+    #endif
     
     public static var ver: String {
         guard let dictionary = Bundle.main.infoDictionary,
@@ -31,5 +33,12 @@ public class Utils {
             let version = dictionary["CFBundleVersion"] as? String else { return "" }
         
         return version
+    }
+
+    public static func generateCurrentTimeStamp(locale: Locale? = nil) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale ?? Locale.current
+        formatter.dateFormat = "yyyyMMddHHmmss"
+        return formatter.string(from: Date())
     }
 }
