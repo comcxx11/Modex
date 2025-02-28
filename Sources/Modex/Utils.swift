@@ -41,4 +41,24 @@ public class Utils {
         formatter.dateFormat = "yyyyMMddHHmmss"
         return formatter.string(from: Date())
     }
+    
+    public static func printFunction(name: String = #function) {
+        print("\n[ \(name) ]\n=======================================================\n")
+    }
+    
+    public static func printLine(name: Int = #line) {
+        print("\n[ \(name) ]\n=======================================================\n")
+    }
+    
+    public static func printFile(name: String = #file) {
+        print("\n[ \(name) ]\n=======================================================\n")
+    }
+    
+    public static func printFilePath(name: String = #filePath) {
+        print("\n[ \(name) ]\n=======================================================\n")
+    }
+    
+    public static func printColumn(name: Int = #column) {
+        print("\n[ \(name) ]\n=======================================================\n")
+    }
 }
