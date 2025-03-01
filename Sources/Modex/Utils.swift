@@ -1,5 +1,7 @@
 import Foundation
 
+#if canImport(UIKit)
+
 public class Utils {
 
     /// 앱 종료
@@ -41,6 +43,11 @@ public class Utils {
         formatter.dateFormat = "yyyyMMddHHmmss"
         return formatter.string(from: Date())
     }
+}
+
+#elseif canImport(AppKit)
+
+public class Utils {
     
     public static func printFunction(name: String = #function) {
         print("\n[ \(name) ]\n=======================================================\n")
@@ -61,4 +68,16 @@ public class Utils {
     public static func printColumn(name: Int = #column) {
         print("\n[ \(name) ]\n=======================================================\n")
     }
+    
+    func checkPlatform() {
+#if canImport(UIKit)
+        print("UIKit이 지원되는 환경입니다.")
+#elseif canImport(AppKit)
+        print("AppKit(macOS) 환경입니다.")
+#else
+        print("지원되지 않는 환경입니다.")
+#endif
+    }
 }
+
+#endif

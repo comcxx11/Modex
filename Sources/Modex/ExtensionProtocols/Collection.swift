@@ -125,4 +125,26 @@ public extension Collection {
         }
         return dictionary
     }
+    
+    /// 컬렉션에서 안전하게 요소를 가져오는 서브스크립트입니다.
+    ///
+    /// 인덱스가 유효하면 해당 요소를 반환하고, 범위를 벗어나면 `nil`을 반환합니다.
+    ///
+    /// ### 사용 예시
+    /// ```swift
+    /// let numbers = [10, 20, 30, 40]
+    ///
+    /// print(numbers[safe: 2])  // 출력: Optional(30)
+    /// print(numbers[safe: 10]) // 출력: nil (Crash 없음)
+    ///
+    /// let text = "Swift"
+    /// print(text[safe: 3] ?? "없음")  // 출력: f
+    /// print(text[safe: 10] ?? "없음") // 출력: 없음
+    /// ```
+    ///
+    /// - Parameter index: 접근하려는 인덱스
+    /// - Returns: 해당 인덱스의 요소를 반환하거나, 유효하지 않으면 `nil`을 반환
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
 }
