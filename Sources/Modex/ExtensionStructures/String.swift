@@ -2,6 +2,21 @@ import Foundation
 
 public extension String {
     
+    /// 현재 문자열을 로컬라이징된 문자열로 변환합니다.
+    ///
+    /// `String(localized:)`을 사용하여 `Localizable.strings` 파일에서 해당 키에 해당하는 번역된 문자열을 반환합니다.
+    ///
+    /// ### 예제
+    /// ```swift
+    /// let greeting = "hello".localized
+    /// print(greeting)  // "こんにちは" (설정 언어가 일본어일 경우)
+    /// ```
+    ///
+    /// - Returns: 번역된 문자열 (해당 키가 없으면 원본 문자열 반환)
+    var localized: String {
+        String(localized: String.LocalizationValue(self))
+    }
+    
     // MARK: - 문자 변환 및 정리
     
     /// 앞뒤 공백 및 개행 문자 제거
